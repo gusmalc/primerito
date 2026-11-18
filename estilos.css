@@ -1,0 +1,117 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* --- PORTADA --- */
+.portada {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/seed/robotics/1200/600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.portada h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #4ade80; /* Un verde tecno */
+}
+
+.portada p {
+    font-size: 1.2rem;
+}
+
+/* --- PRODUCTOS --- */
+.seccion-productos {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.seccion-productos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2d3748;
+}
+
+.grilla-productos {
+    display: flex;
+    flex-direction: column; /* Apilado en celulares */
+    gap: 30px;
+}
+
+.tarjeta-producto {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-producto h3 {
+    margin: 15px 0 10px;
+    color: #1a202c;
+}
+
+.tarjeta-producto p {
+    padding: 0 15px 20px;
+    color: #718096;
+    font-size: 0.95rem;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #4ade80;
+    color: #1a202c;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+/* --- PIE DE PÁGINA --- */
+.pie-pagina {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- ESCRITORIO (Desktop) --- */
+@media (min-width: 992px) {
+    .grilla-productos {
+        flex-direction: row; /* Uno al lado del otro en monitores */
+        justify-content: space-between;
+    }
+    
+    .tarjeta-producto {
+        width: 31%; /* Tres columnas */
+    }
+}
